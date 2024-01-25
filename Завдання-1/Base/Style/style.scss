@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+// Task 1!!
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	width: 800px;
+	border: 1px solid #000;
+	padding: 10px;
+	margin: 50px auto;
+
+	.box {
+		width: 150px;
+		height: 150px;
+		cursor: pointer;
+	}
+
+}
+
+.modal-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #24242490;
+	opacity: 0;
+	display: none;
+}
+
+.modal{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	display: none;
+	cursor: pointer;
+}

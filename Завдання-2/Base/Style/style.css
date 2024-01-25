@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.circle {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  width: 30px;
+  height: 30px;
+  border: black 2px solid;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
