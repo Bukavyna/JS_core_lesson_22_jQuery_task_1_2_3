@@ -22,28 +22,28 @@ $(document).ready(function () {
 	})
 
 	// Crazy ball
-	crazyBall();
-	setInterval(crazyBall, 1000);
+	let color = '';
+	const changeColor = () => {
+		color =	     `${Math.round(Math.random() * 255)},
+									${Math.round(Math.random() * 255)},
+									${Math.round(Math.random() * 255)}`
+	}
 	function crazyBall() {
+		changeColor();
 		Div.animate({
 			top: Math.round(Math.random() * (innerHeight - 200)),
 			left: Math.round(Math.random() * (innerWidth - 200)),
-			 backgroundColor:
-			 `rgb(${Math.round(Math.random() * 255)},
-			 			${Math.round(Math.random() * 255)},
-			 			${Math.round(Math.random() * 255)})`,
+			backgroundColor: `rgb(${color})`,
 			borderColor: `rgb(${Math.round(Math.random() * 255)},
 												${Math.round(Math.random() * 255)},
-												${Math.round(Math.random() * 255)})`,
+												${Math.round(Math.random() * 255)})`
 		}, {
-			duration: 1000,
 			easing: 'easeOutElastic',
-			complete: crazyBall,
 		});
 		Div.css({
-			boxShadow: `0 0 25px 25px rgb(${Math.round(Math.random() * 255)},
-																		${Math.round(Math.random() * 255)},
-																		${Math.round(Math.random() * 255)}, 0.6)`,
+			boxShadow: `0 0 25px 25px rgb(${color}, 0.6)`
 		});
 	}
+	crazyBall();
+	setInterval(crazyBall, 1000);
 });
